@@ -4,12 +4,7 @@ body{
 
 }
 
-/* .backgr{
-    z-index: -1000;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-} */
+/*---------------------------------- MAIN ----------------------------------*/
 
 .main{
     display: flex;
@@ -48,3 +43,62 @@ body{
     opacity: 0.8;
     text-transform: uppercase;
 }
+
+/*---------------------------------- MOVIES ----------------------------------*/
+
+.movies{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0 200px 0 200px;
+    height: 100vh;
+
+    background-color: #1a271c;    
+}
+
+.movies h2{
+    color: white;
+
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    margin-top: 100px;
+}
+
+.movies .grid{
+    display: grid;
+
+    height: fit-content;
+    width: 100%;
+    grid-template-rows: 423px;
+    grid-template-columns: auto auto auto auto auto; 
+
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 200px;
+}
+
+.movies p{
+    margin: 0;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card img:hover{
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* ANIMATION */
