@@ -67,10 +67,10 @@ body{
 
     font-family: 'Playfair Display', serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 50pt;
     text-transform: uppercase;
 
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .movies .grid{
@@ -81,29 +81,52 @@ body{
     grid-template-rows: 423px;
     grid-template-columns: auto auto auto auto auto; 
 
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-around;
+    /* align-items: flex-end; */
     margin-bottom: 200px;
 }
 
 .movies p{
     opacity: 0;
+
+    position: absolute;
+
     transition: 1.5s;
+    transform: translateY(0);
+
     margin: 0;
     color: white;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
+    text-align: center;
 }
 
 .card{
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    flex-direction: column-reverse;
+    height: fit-content;
+    width: fit-content;
     justify-content: space-between;
+    align-self: flex-end;
+
+    transition: 1.5s;
+}
+
+.card img{
+    /* border-radius: 20px; */
 }
 
 .card:hover p{
     opacity: 1;
     transition: 1.5s;
+    transform: translateY(+50px);
 }
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 1.5s;
+
+    box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.2);
+}
+
