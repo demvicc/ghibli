@@ -3,11 +3,6 @@ body{
     background-color: #1a271c;
 
 }
-
-:root{
-    hover_time: 3s;
-}
-
 /*---------------------------------- MAIN ----------------------------------*/
 
 .main{
@@ -52,6 +47,7 @@ body{
 /*---------------------------------- MOVIES ----------------------------------*/
 
 .movies{
+    transition: background-image 1.5s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,7 +55,9 @@ body{
     padding: 0 200px 0 200px;
     height: 100vh;
 
-    background-color: #1a271c;    
+    background: #1a271c;
+    transition: background 1.5s;    
+    /* background: linear-gradient(90deg, rgba(26,39,28,1) 0%, rgba(26,39,28,0.7) 100%); */
 }
 
 .movies h2{
@@ -109,13 +107,11 @@ body{
     width: fit-content;
     justify-content: space-between;
     align-self: flex-end;
+    scale: 0.8;
 
     transition: 1.5s;
 }
 
-.card img{
-    /* border-radius: 20px; */
-}
 
 .card:hover p{
     opacity: 1;
@@ -129,4 +125,6 @@ body{
 
     box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.2);
 }
+
+
 
