@@ -7,12 +7,14 @@ const card3 = document.querySelector('.grid :nth-child(3)')
 const card4 = document.querySelector('.grid :nth-child(4)')
 const card5 = document.querySelector('.grid :nth-child(5)')
 
+const cards = document.querySelectorAll('.card')
+
 var pics = [
     "img/back-pics/totoro.jpg",
     "img/back-pics/kiki.jpg",
-    "img/back-pics/spirited-away.jpg",
+    "img/back-pics/spirited-away2.jpg",
     "img/back-pics/howl.jpg",
-    "img/back-pics/wind-rises.jpg"
+    "img/back-pics/wind-rises2.jpg"
 ]
 
 function scroll(){
@@ -35,8 +37,11 @@ function rev_bckgrnd(){
 card1.addEventListener("mouseover", (evt) => bckgrnd(1))
 card1.addEventListener("mouseout", (evt) => rev_bckgrnd())
 
-card2.addEventListener("mouseover", (evt) => bckgrnd(2))
-card2.addEventListener("mouseout", (evt) => rev_bckgrnd())
+cards[1].addEventListener("mouseover", (evt) => bckgrnd(2))
+cards[1].addEventListener("mouseout", (evt) => rev_bckgrnd())
+
+/*card2.addEventListener("mouseover", (evt) => bckgrnd(2))
+card2.addEventListener("mouseout", (evt) => rev_bckgrnd())*/
 
 card3.addEventListener("mouseover", (evt) => bckgrnd(3))
 card3.addEventListener("mouseout", (evt) => rev_bckgrnd())

@@ -55,7 +55,7 @@ body{
     padding: 0 200px 0 200px;
     height: 100vh;
 
-    background: #1a271c;
+    /* background: #1a271c; */
     transition: background 1.5s;    
     /* background: linear-gradient(90deg, rgba(26,39,28,1) 0%, rgba(26,39,28,0.7) 100%); */
 }
