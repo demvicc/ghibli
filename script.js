@@ -1,5 +1,5 @@
 const movies = document.getElementById('movies')
-const scrollBlock = document.querySelector('.scroll-block')
+/*const scrollBlock = document.querySelector('.scroll-block')*/
 
 const card1 = document.querySelector('.grid :nth-child(1)')
 const card2 = document.querySelector('.grid :nth-child(2)')
@@ -17,17 +17,18 @@ var pics = [
     "img/back-pics/wind-rises2.jpg"
 ]
 
-function scroll(){
+/*function scroll(){
     movies.scrollIntoView({block: "start",behavior: "smooth"})
 }
 
 scrollBlock.addEventListener('click', scroll)
-
+*/
 //                    CARDS
 
 function bckgrnd(_num){
     movies.style.background = `linear-gradient(90deg, rgba(26,39,28,1) 0%, rgba(26,39,28,0.7) 100%), url(${pics[_num - 1]}) no-repeat`
     movies.style.backgroundSize = "cover"
+    movies.style.backgroundPosition = "center"
     console.log(_num)
 }
 function rev_bckgrnd(){

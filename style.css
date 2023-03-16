@@ -3,11 +3,15 @@ body{
     background-color: #1a271c;
 
 }
+
+html{
+    box-sizing: border-box;
+}
 /*---------------------------------- MAIN ----------------------------------*/
 
 .main{
     display: flex;
-    padding: 0 200px 0 200px;
+    padding: 0 120px;
 
     background-image: url('img/backgr.png');
     background-repeat: no-repeat;
@@ -23,7 +27,7 @@ body{
     font-size: 100pt;
     text-align: right;
 
-    margin: 15vh 0 auto auto;
+    margin: 150px 0 auto auto;
 }
 
 .main .scroll-block{
@@ -47,17 +51,13 @@ body{
 /*---------------------------------- MOVIES ----------------------------------*/
 
 .movies{
-    transition: background-image 1.5s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
-    padding: 0 200px 0 200px;
+    padding: 0 120px;
     height: 100vh;
 
-    /* background: #1a271c; */
-    transition: background 1.5s;    
-    /* background: linear-gradient(90deg, rgba(26,39,28,1) 0%, rgba(26,39,28,0.7) 100%); */
+    /* transition: background 1.5s;     */
 }
 
 .movies h2{
@@ -68,20 +68,17 @@ body{
     font-size: 50pt;
     text-transform: uppercase;
 
-    margin-top: 150px;
+    margin: 100px 0 150px;
 }
 
 .movies .grid{
     display: grid;
+    /* grid-template-rows: auto;  */
+    /* grid-template-columns: auto auto auto auto auto;  */
+    grid-template-columns: repeat(5, auto);
 
+    justify-content: space-between;
     height: fit-content;
-    width: 100%;
-    grid-template-rows: 423px;
-    grid-template-columns: auto auto auto auto auto; 
-
-    justify-content: space-around;
-    /* align-items: flex-end; */
-    margin-bottom: 200px;
 }
 
 .movies p{
@@ -97,17 +94,13 @@ body{
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .card{
     display: flex;
-    flex-direction: column-reverse;
-    height: fit-content;
-    width: fit-content;
-    justify-content: space-between;
-    align-self: flex-end;
-    scale: 0.8;
+    /* max-height: calc(382px * 0.8); */
+    /* scale: 1; */
 
     transition: 1.5s;
 }
@@ -116,15 +109,94 @@ body{
 .card:hover p{
     opacity: 1;
     transition: 1.5s;
-    transform: translateY(+50px);
+    transform: translateY(-50px);
 }
-
 .card:hover{
     transform: scale(1.1);
     transition: 1.5s;
-
+    z-index: 2;
+}
+.card:hover img{
     box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.2);
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) and (max-width:1439px){
+    .movies h2{
+        margin-bottom: 50px;
+    }
+    .main h1{
+        font-size: 55pt;
+    }
+    .card{
+        align-items: center;
+    }
+    .card p{
+        /* align-self: start; */
+        font-size: 14px;
+        transform: translateY(-50px);
+    } 
+    .card img{
+        height: 50%;
+    }
+    .card:hover p{
+        opacity: 1;
+        transition: 1.5s;
+        transform: translateY(-120px);
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .card{
+        align-items: center;
+    }
+    .card p{
+        align-self: start;
+        font-size: 18px;
+        transform: translateY(+50px);
+    } 
+    .card img{
+        height: 75%;
+    }
+    .card:hover p{
+        opacity: 1;
+        transition: 1.5s;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1660px){
+    .card img{
+        height: 100%;
+    }
+    .card p{
+        transform: translateY(0);
+    }
+    .card:hover p{
+        opacity: 1;
+        transition: 1.5s;
+        transform: translateY(-50px);
+    }
+}
