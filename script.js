@@ -26,10 +26,11 @@ scrollBlock.addEventListener('click', scroll)
 //                    CARDS
 
 function bckgrnd(_num){
-    movies.style.background = `linear-gradient(90deg, rgba(26,39,28,1) 0%, rgba(26,39,28,0.7) 100%), url(${pics[_num - 1]}) no-repeat`
+    movies.style.background = `linear-gradient(90deg, rgba(26,39,28,0.8) 0%, rgba(26,39,28,0.8) 100%), url(${pics[_num - 1]}) no-repeat`
     movies.style.backgroundSize = "cover"
-    movies.style.backgroundPosition = "center"
-    console.log(_num)
+    if (_num == 1 || _num == 4 || _num == 5){
+        movies.style.backgroundPosition = "right"
+    } else {movies.style.backgroundPosition = "center"}
 }
 function rev_bckgrnd(){
     movies.style.background = "#1a271c";
